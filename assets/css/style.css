@@ -5,11 +5,12 @@ textarea {
     border: 0px;
     /* overflow: hidden; */
     /* padding: 10px; */
+    background-color: floralwhite;
 }
 
 body {
     /* height: 100%;     */
-    background-color: aquamarine;
+    background-color: #ffd1a0;
 }
 
 h1 {
@@ -24,5 +25,8 @@ h1 {
 }
 
 .text-result{
-
+    /* padding: 16px; */
+    padding: 0px 0px 0px 40px;
+    font-size: 55px;
+    font-weight: 400;
 }
