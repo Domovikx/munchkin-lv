@@ -4,6 +4,7 @@ textarea {
     padding: 7px 14px;
     border: 0px;
     overflow: hidden;
+    padding: 10px;
 }
 
 body {
@@ -12,16 +13,16 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 60px;
     padding: 5px 10px;
     /* text-align: center; */
+    display: inline-block;
 }
 
-html {
-    /* width: 100%; */
+.font-size-48{
+    font-size: 48px;    
 }
 
-.text-result {
-    font-size: 50px;
-    padding: 10px;
+.text-result{
+
 }
