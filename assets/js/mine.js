@@ -3,9 +3,10 @@ let textarea;
 $(document).ready(function () {
 
     // первоначальное заполнение textarea
-    let strTextarea = 'level: 1 \n';
-    strTextarea += 'clothes and bonus: 1 2 3+4 5,6 7/8 9(10) \n';
-    strTextarea += 'curses: -1 -2 -3-4 -5,-6 -7/-8 -9(-10)';
+    let strTextarea = 'Level: 1 \n';
+    strTextarea += 'Bonuses, clothes…: 1 2 3+4 5,6 7/8 9(10) \n';
+    strTextarea += 'Curses: -1 -2 -3-4 -5,-6 -7/-8 -9(-10) \n';
+    strTextarea += 'You can write any related numbers in this field, separating them with + - / () characters, etc.'; 
     $("#textarea").html(strTextarea);
     calculator();
     // хочу сделать вызов автовысоты - auto_grow(element) не знаю как написать
@@ -13,9 +14,9 @@ $(document).ready(function () {
 
     // очистка поля textarea
     $('#textarea').one("click", function () {
-        let strTextarea = 'level: 1\n';
-        strTextarea += 'bonus: \n';
-        strTextarea += 'curses: ';
+        let strTextarea = 'Level: 1\n';
+        strTextarea += 'Bonus: \n';
+        strTextarea += 'Curses: ';
         $("#textarea").html(strTextarea);
         auto_grow(this);
         calculator();
@@ -51,6 +52,7 @@ function calculator() {
 
 }
 
+// auto_grow('#textarea'); //хз работает ли это
 function auto_grow(element) {
     element.style.height = "0px";
     element.style.height = (element.scrollHeight) + "px";
