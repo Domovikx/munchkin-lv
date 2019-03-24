@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     textarea = $('#textarea').val();
     calculator();
+    // auto_grow('#textarea');  
 
     $('#textarea').bind(
         'input', function () {
@@ -34,5 +35,11 @@ function calculator() {
     }
 
     $('#result').html(sum);
+  
 }
 
+// auto_grow(element);
+function auto_grow(element) {
+    element.style.height = "0px";
+    element.style.height = (element.scrollHeight)+"px";
+}
