@@ -2,23 +2,36 @@ let textarea;
 
 $(document).ready(function () {
 
-    textarea = $('#textarea').val();
+    // первоначальное заполнение textarea
+    let strTextarea = 'level: 1 \n';
+    strTextarea += 'clothes and bonus: 1 2 3+4 5,6 7/8 9(10) \n';
+    strTextarea += 'curses: -1 -2 -3-4 -5,-6 -7/-8 -9(-10)';
+    $("#textarea").html(strTextarea);
     calculator();
-    // auto_grow('#textarea');  
+    // хочу сделать вызов автовысоты - auto_grow(element) не знаю как написать
 
-    $('#textarea').bind(
-        'input', function () {
-            textarea = $('#textarea').val();
-            calculator();
-        }
-    );
+
+    // очистка поля textarea
+    $('#textarea').one("click", function () {
+        let strTextarea = 'level: 1\n';
+        strTextarea += 'bonus: \n';
+        strTextarea += 'curses: ';
+        $("#textarea").html(strTextarea);
+        auto_grow(this);
+        calculator();
+    });
+
+    $('#textarea').bind('input', function () {
+        calculator();
+    });
 
 });
 
 
 function calculator() {
-
-    let arr = textarea.split(/[^-0-9]/); // подумать - как оптимизировать
+    textarea = $('#textarea').val();
+    let str = textarea.replace(/-/g, ' -');
+    let arr = str.split(/[^-0-9]/); // подумать - как оптимизировать
 
     let newArr = [];
     for (let i = 0; i < arr.length; i++) {
@@ -35,11 +48,10 @@ function calculator() {
     }
 
     $('#result').html(sum);
-  
+
 }
 
-// auto_grow(element);
 function auto_grow(element) {
     element.style.height = "0px";
-    element.style.height = (element.scrollHeight)+"px";
+    element.style.height = (element.scrollHeight) + "px";
 }
