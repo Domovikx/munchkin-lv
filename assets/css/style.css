@@ -76,3 +76,23 @@ a {
     background-color:antiquewhite;
     padding: 5px 0px; 
 } */
+
+.dice {
+    margin: 0 auto;
+    height: 280px;
+    width: 280px;
+    border-radius: 50px;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dice div {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: calc(70%/3.1);
+    height: calc(70%/3);
+    display: inline-block;
+    border-radius: 100%;
+    margin: 13px;
+}
