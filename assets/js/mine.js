@@ -26,6 +26,13 @@ $(document).ready(function () {
         calculator();
     });
 
+    $("#dice").click(function () {
+        alert("Вы нажали на кнопку кубики " + diceRandom());
+    });
+
+
+
+
 });
 
 
@@ -59,4 +66,8 @@ function calculator() {
 function autoGrow(element) {
     element.style.height = "0px";
     element.style.height = (element.scrollHeight) + "px";
+}
+
+function diceRandom() {
+    return Math.floor(Math.random() * 6) + 1;
 }
