@@ -11,7 +11,6 @@ $(document).ready(function () {
     calculator();
     // хочу сделать вызов автовысоты - autoGrow(element) не знаю как написать
 
-
     // очистка поля textarea
     $('#textarea').one("click", function () {
         let strTextarea = 'Level: 1\n';
@@ -29,9 +28,6 @@ $(document).ready(function () {
     $("#dice").click(function () {
         alert("Вы нажали на кнопку кубики " + diceRandom());
     });
-
-
-
 
 });
 
