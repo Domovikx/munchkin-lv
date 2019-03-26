@@ -8,40 +8,28 @@ textarea {
     padding: 12px 24px 0px;
     border: 0px;
     font-size: 60px;
-    /* overflow: hidden; */
-    /* padding: 10px; */
     color: rgba(0, 0, 0, 0.8);
     background-color: antiquewhite;
     resize: none;
     overflow: hidden;
-    /* min-height: 50px; */
-    /* max-height: 100px; */
 }
 
 body {
-    /* height: 100%;     */
     background-color: #ffd1a0;
 }
 
 h1 {
     font-size: 60px;
     margin: 16px 24px;
-    /* text-align: center; */
     display: inline-block;
-    /* font-weight: bold; */
     color: rgba(0, 0, 0, 0.8);
 }
 
 .text-result {
-    /* padding: 16px; */
-    /* padding: 0px 0px 0px 40px; */
     font-size: 60px;
-    /* font-weight: bold; */
     color: rgba(0, 0, 0, 0.8);
     display: inline-block;
     margin: 16px 0px 24px 40px;
-    /* padding: 16px 0px 24px 40px; */
-    /* background-color: antiquewhite; */
 }
 
 p {
@@ -49,7 +37,6 @@ p {
     color: rgba(0, 0, 0, 0.8);
     padding: 20px 0px;
     text-align: justify;
-    /* background-color: #ffd1a0; */
 }
 
 .info {
@@ -65,17 +52,7 @@ a {
     background-color: antiquewhite;
     padding: 10px 20px;
     border-radius: 20px;
-    /* padding-: 5px; */
-    /* box-shadow: rgba(0, 0, 0, 0.8); */
-    /* box-shadow: 7px 7px 5px rgba(0,0,0,0.6); */
 }
-
-/* a:hover {
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 500;
-    background-color:antiquewhite;
-    padding: 5px 0px; 
-} */
 
 .dice {
     margin: 0 auto;
@@ -97,3 +74,6 @@ a {
     margin: 13px;
 }
 
+.munch-img>img {
+    width: 300px;
+}
