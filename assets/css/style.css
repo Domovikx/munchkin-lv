@@ -58,7 +58,7 @@ a {
     text-align: center;
 }
 
-.dice {
+#dice {
     height: 280px;
     width: 280px;
     border-radius: 50px;
@@ -68,6 +68,11 @@ a {
     display: inline-block;
     vertical-align: bottom;
 }
+
+/* .dice:active {
+    transform: rotate(720deg);
+    transition: all 5s linear;
+} */
 
 .dice>div {
     background-color: rgba(0, 0, 0, 0.6);
@@ -82,4 +87,18 @@ a {
     width: 300px;
     margin: 50px 50px 0px;
     display: inline-block;
+}
+
+
+
+/* #dice {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #eee;
+    margin: 30px;
+} */
+.rotate360 {
+    transition: transform 1s;
+    transform: rotate(360deg)
 }

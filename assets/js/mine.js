@@ -31,11 +31,18 @@ $(document).ready(function () {
 
 
     $("#dice").click(function () {
-        // alert("Вы нажали на кнопку кубики " + diceRandom());
+        // alert("Вы нажали на кнопку кубики " + diceRandom());  
+
+        $(this).animate({ borderSpacing: -720 }, {
+            step: function (now, fx) {
+                $(this).css('transform', 'rotate(' + now + 'deg)');
+            },
+            duration: 'slow'
+        }, 'linear');
+
         diceRandom();
     });
 
-    
     $(window).on('beforeunload', function () { return 'Вы уверены, что хотите покинуть страницу?'; });
 
 });
@@ -98,7 +105,7 @@ function diceRandom() {
 
 
 function changeColorCircle(arr, colorBefore, colorAfter) {
-    let color = colorAfter;
+    // let color = colorAfter;
     for (let i = 1; i < 10; i++) {
         for (const a of arr) {
             if (a == i) {
