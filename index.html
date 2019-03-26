@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- yнужно ли писать поле type ??? -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,14 +15,12 @@
         <div>
             <span class="text-result" id="result">0</span>
             <h1>Munchkin Calculator</h1>
-            <!-- <div id="result">div</div> -->
-            <!-- <span class="text-result font-size-48" id="result">0</span> -->
-            <!-- нужно ли использовать name? или можно обойтись только - id? -->
-            <textarea id="textarea" onkeyup="autoGrow(this)"></textarea>
-            <!-- можно заменить полностью код22 - onkeyup="autoGrow(this)" -->
+            <textarea id="textarea"></textarea>
         </div>
 
-        <div>
+        <div class='dice-place'>            
+            <img class="munch-img" src="assets/pic/DOnTlFTWkAAwNBP.png">
+            <!-- Идея сделать смену пола персонажа -->
             <div class="dice" id="dice">
                 <div></div>
                 <div></div>
@@ -34,8 +31,7 @@
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
-            <div class="munch-img"><img src="assets/pic/DOnTlFTWkAAwNBP.png" alt="" sizes="" srcset=""></div>
+            </div>            
         </div>
 
         <div class="info">
