@@ -14,16 +14,43 @@
 <body>
     <main>
         <div>
-            <h1>Munchkin Calculator:</h1>
-            <!-- <div id="result">div</div> -->
             <span class="text-result" id="result">0</span>
+            <h1>Munchkin Calculator</h1>
+            <!-- <div id="result">div</div> -->
+            <!-- <span class="text-result font-size-48" id="result">0</span> -->
             <!-- нужно ли использовать name? или можно обойтись только - id? -->
-            <textarea id="textarea">
-Пиши в любом месте: =)
-ваш уровень: 3 1
-бонуса: 1 3 2
-дебафы: -4 -3 4 -7
-            </textarea>
+            <textarea id="textarea" onkeyup="autoGrow(this)"></textarea>
+            <!-- можно заменить полностью код22 - onkeyup="autoGrow(this)" -->
+        </div>
+
+        <div>
+            <div class="dice" id="dice">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="munch-img"><img src="assets/pic/DOnTlFTWkAAwNBP.png" alt="" sizes="" srcset=""></div>
+        </div>
+
+        <div class="info">
+            <p>Text written in small print that no one ever reads. BUT! By trying to read this text, you got a curse!
+                Now you agree that using this calculator, you will your soul the developer of this calculator and you
+                agree to serve him forever, of course, after his death. Enjoy the game Munchkin. )</p>
+            <p>
+                <a href="https://munchkin.game/gameplay/rules/" target="_blank">Munchkin all the rules of the game</a>
+            </p>
+            <p>
+                <a href="https://hobbyworld.ru/download/rules/m_color_rules.pdf" target="_blank">Правила игры на
+                    русском</a>
+            </p>
+        </div>
+
         </div>
     </main>
 </body>
