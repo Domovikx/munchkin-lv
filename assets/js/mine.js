@@ -1,5 +1,6 @@
 let textarea;
 
+
 $(document).ready(function () {
 
     // первоначальное заполнение textarea
@@ -30,21 +31,20 @@ $(document).ready(function () {
     });
 
 
-    $("#dice").click(function () {
-        // alert("Вы нажали на кнопку кубики " + diceRandom());  
+    $(".dice").click(function () { 
 
-        $(this).animate({ borderSpacing: -720 }, {
-            step: function (now, fx) {
-                $(this).css('transform', 'rotate(' + now + 'deg)');
+        $(this).animate({ borderSpacing: randomAngle() }, {
+            step: function (now) {
+                $(this).css('transform', 'rotate(' + now + 'deg)');                
             },
-            duration: 'slow'
+            duration: 1000
         }, 'linear');
 
         diceRandom();
     });
 
-    $(window).on('beforeunload', function () { return 'Вы уверены, что хотите покинуть страницу?'; });
 
+    $(window).on('beforeunload', function () { return 'Вы уверены, что хотите покинуть страницу?'; });
 });
 
 
@@ -79,22 +79,18 @@ function autoGrow() {
 function diceRandom() {
 
     const num = Math.floor(Math.random() * 6) + 1;
-
-    const colorBefore = 'antiquewhite';
-    const colorAfter = 'rgba(0, 0, 0, 0.6)';
-
     switch (num) {
-        case 1: changeColorCircle([5], colorBefore, colorAfter);
+        case 1: changeColorCircle([5]);
             break;
-        case 2: changeColorCircle([3, 7], colorBefore, colorAfter);
+        case 2: changeColorCircle([3, 7]);
             break;
-        case 3: changeColorCircle([1, 5, 9], colorBefore, colorAfter);
+        case 3: changeColorCircle([1, 5, 9]);
             break;
-        case 4: changeColorCircle([1, 3, 7, 9], colorBefore, colorAfter);
+        case 4: changeColorCircle([1, 3, 7, 9]);
             break;
-        case 5: changeColorCircle([1, 3, 5, 7, 9], colorBefore, colorAfter);
+        case 5: changeColorCircle([1, 3, 5, 7, 9]);
             break;
-        case 6: changeColorCircle([1, 3, 4, 6, 7, 9], colorBefore, colorAfter);
+        case 6: changeColorCircle([1, 3, 4, 6, 7, 9]);
             break;
         default:
             break;
@@ -104,15 +100,20 @@ function diceRandom() {
 }
 
 
-function changeColorCircle(arr, colorBefore, colorAfter) {
-    // let color = colorAfter;
+function randomAngle() {
+    const num = Math.floor(Math.random() * 720);
+    return num;
+}
+
+
+function changeColorCircle(arr) {
     for (let i = 1; i < 10; i++) {
         for (const a of arr) {
             if (a == i) {
-                $("#dice>div:nth-child(" + i + ")").css("background-color", colorAfter);
+                $("#dice>div:nth-child(" + i + ")").fadeTo(150,1);
                 break;
             } else {
-                $("#dice>div:nth-child(" + i + ")").css("background-color", colorBefore);
+                $("#dice>div:nth-child(" + i + ")").fadeTo(150,0);
             }
         }
     }

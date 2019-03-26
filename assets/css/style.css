@@ -58,7 +58,7 @@ a {
     text-align: center;
 }
 
-#dice {
+.dice {
     height: 280px;
     width: 280px;
     border-radius: 50px;
@@ -67,6 +67,7 @@ a {
     margin: 50px;
     display: inline-block;
     vertical-align: bottom;
+    border-spacing: 0px;
 }
 
 /* .dice:active {
@@ -84,20 +85,11 @@ a {
 }
 
 .munch-img {
-    width: 300px;
+    height: 375px;
     margin: 50px 50px 0px;
     display: inline-block;
 }
 
-
-
-/* #dice {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background: #eee;
-    margin: 30px;
-} */
 .rotate360 {
     transition: transform 1s;
     transform: rotate(360deg)
