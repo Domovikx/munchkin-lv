@@ -31,11 +31,11 @@ $(document).ready(function () {
     });
 
 
-    $(".dice").click(function () { 
+    $(".dice").click(function () {
 
         $(this).animate({ borderSpacing: randomAngle() }, {
             step: function (now) {
-                $(this).css('transform', 'rotate(' + now + 'deg)');                
+                $(this).css('transform', 'rotate(' + now + 'deg)');
             },
             duration: 1000
         }, 'linear');
@@ -84,13 +84,13 @@ function diceRandom() {
             break;
         case 2: changeColorCircle([3, 7]);
             break;
-        case 3: changeColorCircle([1, 5, 9]);
+        case 3: changeColorCircle([9, 1, 5]);
             break;
-        case 4: changeColorCircle([1, 3, 7, 9]);
+        case 4: changeColorCircle([1, 9, 3, 7]);
             break;
-        case 5: changeColorCircle([1, 3, 5, 7, 9]);
+        case 5: changeColorCircle([1, 9, 3, 7, 5]);
             break;
-        case 6: changeColorCircle([1, 3, 4, 6, 7, 9]);
+        case 6: changeColorCircle([1, 9, 3, 7, 4, 6]);
             break;
         default:
             break;
@@ -110,10 +110,10 @@ function changeColorCircle(arr) {
     for (let i = 1; i < 10; i++) {
         for (const a of arr) {
             if (a == i) {
-                $("#dice>div:nth-child(" + i + ")").fadeTo(150,1);
+                $("#dice>div:nth-child(" + i + ")").fadeTo(150, 1);
                 break;
             } else {
-                $("#dice>div:nth-child(" + i + ")").fadeTo(150,0);
+                $("#dice>div:nth-child(" + i + ")").fadeTo(150, 0);
             }
         }
     }
